@@ -15,13 +15,10 @@ wrong label is not graded.
 
 **Issue link**
 
-[The individual Path Review issue page. A link to the repository or the issue list
-does not satisfy this field.]
+https://github.com/zxcalc/zxlive/issues/519
 
 **Verdict output**
-
-[Your skill's live-mode output for this issue, pasted verbatim and ending with the
-fenced JSON verdict block. A summary does not satisfy this field.]
+accept
 
 **The verdict must record `accept` for this issue.** Choose an issue your own skill
 accepts. If your skill rejects every candidate you try, that is a signal about your
@@ -40,28 +37,19 @@ paste the output here, including the closing JSON block
 Quote source text directly in each field below. Paraphrase does not satisfy them.
 
 **Run history**
-
-[The agreement score of each run you did, in order. A single run is a complete answer if
-only one run occurred. **The last score in your list must match the agreement line in the
-`eval-run.txt` you committed** — that file is the record of your final run.]
-
+12/20
+12/20
+14/20
 **Issue analysis**
 
-[One scored issue, identified by id (`issue-01` through `issue-20`; the `calib-`
-issues are not scored). State your rubric's decision, the gold label, and the
-reasoning that produced your rubric's result.]
+issue-02 (rupa/z#349). My rubric rejected it via maintainer-active: no commits or releases to the repo in over a year. The gold label agrees — reject, with the note "clean bounded bug, but no commits or releases in over a year and an unanswered tracker." The issue itself is well-scoped and clearly written, which is exactly why this check matters as a separate gate from scope-bounded: a good issue in a dead repo is still a dead end for a first contribution, since there's no one to merge the fix.
 
 **Check rationale**
 
-[One check from the `rubric.md` uploaded to `tools/issue-select/`, quoted as it is
-currently written, with the reasoning behind its current form.]
+maintainer-active — Most recent commit date to the default branch, from the repo-facts block. Passes if the most recent commit is within the last 60 days. I made this required because a repo with no recent commits has no one positioned to review a first-timer's PR regardless of how clean the issue looks — issue-07 and issue-17 (dead-repo category) confirmed this: both had well-formed, bounded issues but zero recent maintainer activity, and the gold labels reject both on that basis alone.
 
 **Trade-offs**
-
-[What the quoted check gives up. Any one of these is a complete answer: an issue whose
-result it changes, a canary you re-ran with `--only`, a case you accept it will miss, or a
-stated reason nothing changed elsewhere. "Nothing changed, and here is how I know" earns
-the point in full when the reason follows.]
+I think the issues could have a lot of tradeoffs:
 
 ---
 
@@ -73,12 +61,7 @@ This is also the basis for the claim comment you write in Unit 2.
 
 **Selection rationale**
 
-[Answer all three:
-
-1. The issue's fit to your interests and to the time available.
-2. What the verdict identified correctly, and what you weighed that the rubric could
-   not.
-3. The anticipated difficulty in claiming it.]
+The issues fit my mathematics interests/graphing that I could do it. The verdict is projected to complete pretty quickly, but there are some challenges because I am not sure about claiming it.
 
 ---
 
